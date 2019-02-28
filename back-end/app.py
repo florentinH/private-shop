@@ -2,7 +2,7 @@ import warnings
 
 import subprocess
 
-from database import database
+import database
 
 from flask import Flask, jsonify, request, abort
 
@@ -25,5 +25,18 @@ def create_shop():
 
     return jsonify({'item': 'shop crée'}), 201
 
-    if __name__ == '__main__':
+@app.route('/api/v1.0/produit', methods=['GET'])
+def get_produit():
+        database.getproduits()
+        result = database.resultsExportProduits
+        print (result)
+        return jsonify({'item': result}), 201
+
+@app.route('/api/v1.0/produit', methods=['POST'])
+def create_produit():
+        database.createproduit(request.json)
+        
+        return jsonify({'item': 'produit crée'}), 201
+
+if __name__ == '__main__':
         app.run(debug=True)
