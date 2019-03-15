@@ -29,24 +29,24 @@ class shopForm extends React.Component {
     createShop() {
         let data = {
             "name": this.state.name,
-            "address" : this.state.address
-        }
+            "address": this.state.address
+        };
 
         fetch(`${API_URL}/shop`, {
-            methode: 'post',
-            headers: {'Accept': 'application/json', 'Content-Type': 'application/json'},
+            method: 'post',
+            headers: {'Accept': 'application/json', 'Content-Type': 'application/json',},
             body: JSON.stringify(data)
         }).then((result) => {
-            console.log(result)
+            console.log(result);
 
             this.notify();
 
-            this.props.history.push('/')
+            this.props.history.push('/');
+
 
         }).catch((err) => {
-            console.log(err)
+            console.log(err);
         });
-
     }
 
     handleCreateShop = (event) => {
