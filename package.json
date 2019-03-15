@@ -12,16 +12,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "react-scripts": "^1.1.4"
+    "react-scripts": "^1.1.5"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
     "react-confirm-alert": "^2.0.5",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "react-toastify": "^4.1.0"
+    "react-toastify": "^4.5.2"
   },
   "browserslist": [
     ">0.2%",

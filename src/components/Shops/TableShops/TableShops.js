@@ -10,7 +10,7 @@ const TableShops = (props) => {
         <div className="h2 text-center">Liste Magasin</div>
         <div className="row">
             <div className="col-md-12 pad-10">
-                <button onClick={()=> history.push('ajout')} type="submit" className="btn btn-primary">
+                <button onClick={()=> history.push('/ajout')} type="submit" className="btn btn-primary">
                     Ajouter un magasin
                 </button>
             </div>
@@ -29,10 +29,10 @@ const TableShops = (props) => {
                     <tr key={shop.id_shop}
                     >
                         <td>
-                            <span>{shop.nom}</span>
+                            <span>{shop.name}</span>
                         </td>
                         <td>
-                            <span>{shop.adresse}</span>
+                            <span>{shop.address}</span>
                         </td>
                     </tr>
                 ))}

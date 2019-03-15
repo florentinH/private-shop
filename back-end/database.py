@@ -18,8 +18,8 @@ def getshops():
         for row in results:
             item = {
                 "id_shop": row[0],
-                "nom": row[1],
-                "adresse": row[2]
+                "name": row[1],
+                "address": row[2]
             }
             resultsExportShops.append(item)
     except MySQLdb.Error as e :
@@ -34,7 +34,7 @@ def getshops():
             db.close()
 
 def createshop(shop):
-    sql = "Insert into t_shop(nom, adresse) values('%s', '%s')" % (shop['nom'], shop['adresse'])
+    sql = "Insert into t_shop(name, address) values('%s', '%s')" % (shop['name'], shop['address'])
     try:
         cursor.execute(sql)
         db.commit()
@@ -59,10 +59,10 @@ def getproduits():
         for row in results:
             item = {
                 "id_produit": row[0],
-                "nom": row[1],
-                "taille": row[2],
-                "quantité": row[3],
-                "couleurs": row[4],
+                "name": row[1],
+                "size": row[2],
+                "quantity": row[3],
+                "colors": row[4],
                 "id_shop": row[5]
             }
             resultsExportProduits.append(item)
@@ -78,7 +78,7 @@ def getproduits():
             db.close()
 
 def createproduit(produit):
-    sql = "Insert into t_produits(nom, taille, quantité, couleurs) values('%s', '%s', '%s', '%s')" % (produit['nom'], produit['taille'], produit['quantité'], produit['couleurs'])
+    sql = "Insert into t_produits(name, size, quantity, colors) values('%s', '%s', '%s', '%s')" % (produit['name'], produit['size'], produit['quantity'], produit['colors'])
     try:
         cursor.execute(sql)
         db.commit()

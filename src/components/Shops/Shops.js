@@ -22,7 +22,7 @@ class Shops extends React.Component {
 
     fetchShops() {
         this.setState({ loading: true })
-        fetch(`${API_URL}/etudiant`)
+        fetch(`${API_URL}/shop`)
         //to decode the JSON data received from the BACK
         .then(handleResponse)
         .then((data) => {
@@ -39,7 +39,7 @@ class Shops extends React.Component {
     }
 
     render() {
-        const {loading, error, shops} = this. state
+        const {loading, error, shops} = this.state
         if(loading) {
             return <div className="loading-container"><Loading /></div>
         }
