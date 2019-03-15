@@ -5,6 +5,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Shops from "./components/Shops/Shops"
+import shopForm from './containers/Shop/ShopForm';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
 
                 <Switch>
                     <Route path="/" component={Shops} exact />
+                    <Route path="/ajout" component={shopForm} exact />
                 </Switch>
             </div>        
         </BrowserRouter>
