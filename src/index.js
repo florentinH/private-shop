@@ -1,30 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import Header from './components/shared/Header/Header'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import './index.css'
+import App from './App'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Shops from "./components/Shops/Shops"
-import shopForm from './containers/Shop/ShopForm';
+import reducer from './reducers'
 
-
-const App = () => {
-    return (
-        <BrowserRouter>
-            <div>
-                <Header></Header>
-
-                <Switch>
-                    <Route path="/" component={Shops} exact />
-                    <Route path="/ajout" component={shopForm} exact />
-                </Switch>
-            </div>        
-        </BrowserRouter>
-    )
-}
-
+const store = createStore(reducer)
 
 ReactDOM.render(
-    <App/>,
-    document.getElementById('app')
-)
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('app'));
