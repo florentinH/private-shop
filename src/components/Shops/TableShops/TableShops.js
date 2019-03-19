@@ -7,7 +7,7 @@ const TableShops = (props) => {
     const {shops, history} = props
 
     return (<div className="table-container">
-        <div className="h2 text-center">Liste Magasin</div>
+        <div className="h2 text-center">Nos Magasins</div>
         <div className="row">
             <div className="col-md-12 pad-10">
                 <button onClick={()=> history.push('/ajout')} type="submit" className="btn btn-primary">

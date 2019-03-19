@@ -1,19 +1,19 @@
-import {
-    ADD_SHOP
-} from '../actions';
+// import {
+//     ADD_SHOP
+// } from '../actions';
 
-const initialState = {
-    name: '',
-    address: ''
-}
+// const initialState = {
+//     name: '',
+//     address: ''
+// }
 
-const reducer = (state = initialState, action) => {
-    switch(action.type) {
-        case ADD_SHOP:
+// const reducer = (state = initialState, action) => {
+//     switch(action.type) {
+//         case ADD_SHOP:
 
-        default:
-            return state;
-    }
-}
+//         default:
+//             return state;
+//     }
+// }
 
-export default reducer;
+// export default reducer;
