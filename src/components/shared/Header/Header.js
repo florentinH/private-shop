@@ -18,7 +18,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                     <Nav.Link href="/">Accueil</Nav.Link>
-                    <Nav.Link href="#link">Magasins</Nav.Link>
+                    <Nav.Link href="/shops">Magasins</Nav.Link>
                     <NavDropdown title="Produits" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Produits</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

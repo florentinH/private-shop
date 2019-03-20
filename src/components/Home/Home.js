@@ -1,45 +1,44 @@
 import React from 'react'
 import { handleResponse } from '../../helpers'
 import { API_URL } from '../../config'
-import TableShops from './TableShops/TableShops.js'
+import HomeTable from './HomeTable/HomeTable'
 import Loading from '../shared/Loading/Loading'
 
-class Shops extends React.Component {
+class Home extends React.Component {
     constructor() {
         super()
 
         this.state = {
             loading: false,
-            shops: [],
+            shopsProduct: [],
             error: null
         }
     }
 
-
     componentDidMount() {
-        this.fetchShops();
+        this.fetchHome();
     }
 
-    fetchShops() {
+    fetchHome() {
         this.setState({ loading: true })
         fetch(`${API_URL}/shop`)
         //to decode the JSON data received from the BACK
         .then(handleResponse)
         .then((data) => {
-            const shops = data.item
+            const shopsProduct = data.item
 
             this.setState({
-                shops,
+                shopsProduct,
                 loading: false
             })
         })
         .catch((error) => {
-            this.setState({ error : error.errorMessage, loading: false})
+            this.setState({ error: error.errorMessage, loading: false})
         })
     }
 
     render() {
-        const {loading, error, shops} = this.state
+        const {loading, error, shopsProduct} = this.state
         if(loading) {
             return <div className="loading-container"><Loading /></div>
         }
@@ -48,10 +47,10 @@ class Shops extends React.Component {
         }
         return (
             <div>
-                <TableShops shops={shops} />
+                <HomeTable shopsProduct={shopsProduct} />
             </div>
         )
     }
 }
 
-export default Shops
+export default Home

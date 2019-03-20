@@ -5,6 +5,7 @@ import './index.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Shops from "./components/Shops/Shops"
 import shopForm from './containers/Shop/ShopForm';
+import Home from './components/Home/Home'
 
 class App extends React.Component {
     render () {
@@ -14,8 +15,9 @@ class App extends React.Component {
                     <Header></Header>
     
                     <Switch>
-                        <Route exact path="/" component={Shops} />
+                        <Route exact path="/" component={Home} />
                         <Route path="/ajout" component={shopForm} />
+                        <Route path="/shops" component={Shops} />
                     </Switch>
                 </div>        
             </BrowserRouter>
