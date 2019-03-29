@@ -1,6 +1,6 @@
 
 .Header {
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
     height: 100px;
 }
 
-.Header-logo {
+/* .Header-logo {
     position: absolute;
     top: 30px;
     left: 20px;
@@ -20,4 +20,4 @@
     .Header-logo {
         display: none;
     }
-}
+} */
